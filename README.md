@@ -1,6 +1,6 @@
 # Beguiling Minutiae
 
-![baroque cathedral] (https://c0.wallpaperflare.com/preview/761/252/1012/ancient-architecture-art-baroque.jpg)
+![baroque_cathedral](https://c0.wallpaperflare.com/preview/761/252/1012/ancient-architecture-art-baroque.jpg)
 
 ## Overview
 This trivia game will test your knowledge of intricate details across a great breadth of subjects. 
