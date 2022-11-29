@@ -1,7 +1,16 @@
-# beguiling_minutiae_trivia_game
+# Beguiling Minutiae
 
-Title: Beguiling Minutiae
-Type: Trivia Game
+## Overview
+<!-- Brief summary here; to be updated at later time -->
+<!-- Type: Trivia Game -->
 
-Technologies Used: CSS, HTML, JavaScript
+## Technologies Utilized
+- CSS
+- HTML,
+- JavaScript
 
+Scoring Model:
+    Correct Answers:
+        Open-Ended: 5 points
+        Multiple-Choice: 3 points
+        True/False: 1 point

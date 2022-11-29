@@ -30,6 +30,7 @@ let playerAnswer = document.querySelector('#answer');
 let fullQuestion = document.querySelector('.questionFullText');
 let declarations = document.querySelector('.declarations');
 let endGame = document.querySelector('#endgame');
+let scoreboard = document.querySelector('.scoreboard')
 let player1Score = 0;
 let player2Score = 0;
 let primaryTurn = true;
@@ -45,7 +46,7 @@ function playGame() {
                 declarations = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
             }
         }));
-        
+
     };
 }
 
@@ -53,10 +54,19 @@ function evaluateAnswer() {
     if (playerAnswer === questionAnswerPairs[i].answer.toLowerCase) {
         if (primaryTurn === true) {
             player1Score += questionAnswerPairs[i].points;
+            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         } else if (primaryTurn = false) {
             player2Score += questionAnswerPairs[i].points;
+            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         }
     } else {
         declarations = 'Unaccepted answer';
+        if (primaryTurn === true) {
+            player1Score -= Math.ceil(questionAnswerPairs[i].points / 2);
+            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
+        } else if (primaryTurn = false) {
+            player2Score -= Math.ceil(questionAnswerPairs[i].points / 2);
+            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
+        }
     }
 }

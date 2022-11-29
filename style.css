@@ -5,3 +5,13 @@ body {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/St-Anne_church_Krakow_003.JPG');
     background-size: cover;
 }
+
+.interactive {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard {
+    text-align: right;
+    margin: 0px 50px 0px 0px;
+}
