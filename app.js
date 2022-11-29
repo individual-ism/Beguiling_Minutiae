@@ -18,10 +18,10 @@ const questionAnswerPairs = [
     {number: 2,
     question: 'After President Woodrow Wilson fell ill in the latter half of his second term, this person is rumored to have taken unofficial control of the presidency. What is the first and last name of this person?',
     answer: 'Edith Wilson',
-    points: 3},
+    points: 5},
     {number: 3,
-    question: `Italy recently elected and installed its most right-wing government since Mussolini. This new coalition government, led by Giorgia Meloni, includes which former prime minister? Choices (Type full name in the response box): ${q3}`,
-    points: 2},
+    question: `Italy recently elected and installed its most right-wing government since Mussolini. This new coalition government, led by Giorgia Meloni, includes support from which former prime minister? Choices (Type full name in the response box): ${q3}`,
+    points: 3},
     {number: 4,
     question: ''}
 ];
@@ -31,9 +31,14 @@ let fullQuestion = document.querySelector('.questionFullText');
 let declarations = document.querySelector('.declarations');
 let endGame = document.querySelector('#endgame');
 let scoreboard = document.querySelector('.scoreboard')
+let playAgain = document.querySelector('#reset')
 let player1Score = 0;
 let player2Score = 0;
 let primaryTurn = true;
+
+function selectQuestion() {
+
+}
 
 function playGame() {
     for (let i = 0; i < questionAnswerPairs.length; i++) {
@@ -54,19 +59,22 @@ function evaluateAnswer() {
     if (playerAnswer === questionAnswerPairs[i].answer.toLowerCase) {
         if (primaryTurn === true) {
             player1Score += questionAnswerPairs[i].points;
-            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         } else if (primaryTurn = false) {
             player2Score += questionAnswerPairs[i].points;
-            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         }
     } else {
         declarations = 'Unaccepted answer';
         if (primaryTurn === true) {
             player1Score -= Math.ceil(questionAnswerPairs[i].points / 2);
-            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         } else if (primaryTurn = false) {
             player2Score -= Math.ceil(questionAnswerPairs[i].points / 2);
-            scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`
         }
     }
+    scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
 }
+
+playAgain.addEventListener('click', () => {
+    player1Score = 0;
+    player2Score = 0;
+    primaryTurn = true;
+})
