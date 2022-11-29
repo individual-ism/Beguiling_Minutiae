@@ -29,9 +29,25 @@ const questionAnswerPairs = [
 let playerAnswer = document.querySelector('#answer');
 let fullQuestion = document.querySelector('.questionFullText');
 let declarations = document.querySelector('.declarations');
+let endGame = document.querySelector('#endgame');
 let player1Score = 0;
 let player2Score = 0;
 let primaryTurn = true;
+
+function playGame() {
+    for (let i = 0; i < questionAnswerPairs.length; i++) {
+        if (endGame.addEventListener('click', () => {
+            if (player1Score > player2Score) {
+                declarations = 'Congratulations, Player 1. You reign victorious.';
+            } else if (player1Score < player2Score) {
+                declarations = 'Kudos to you, Player 2, on your success this game.';
+            } else {
+                declarations = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
+            }
+        }));
+        
+    };
+}
 
 function evaluateAnswer() {
     if (playerAnswer === questionAnswerPairs[i].answer.toLowerCase) {
@@ -41,6 +57,6 @@ function evaluateAnswer() {
             player2Score += questionAnswerPairs[i].points;
         }
     } else {
-        declarations = 'Unaccepted answer'
+        declarations = 'Unaccepted answer';
     }
 }
