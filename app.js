@@ -51,43 +51,32 @@ let endGame = document.querySelector('#endgame');
 let scoreboard = document.querySelector('.scoreboard');
 let playAgain = document.querySelector('#reset');
 let questionPosed = document.querySelector('.questionFullText');
+let submitButton = document.querySelector('#submit');
+let nextQButton = document.querySelector('#nextQuestion');
 let player1Score = 0;
 let player2Score = 0;
+let player = 'Player 1';
+let utilizedQuestions = [];
 let primaryTurn;
-let questionIndex;
-let player;
+let questionIndex = Math.floor(Math.random() * questionAnswerPairs.length);
 
-if (primaryTurn) player = 'Player 1';
-else player = 'Player 2';
 
+
+primaryTurn ? 'Player 1' : 'Player 2';
 declarations.innerHTML = `${player}, here is your challenge for contemplation`;
 
 function selectQuestion() {
-    questionIndex = Math.floor(Math.random() * questionAnswerPairs.length);
-    questionPosed = questionAnswerPairs[questionIndex].question;
-}
-
-function playGame() {
-    for (let i = 0; i < questionAnswerPairs.length; i++) {
-        if (endGame.addEventListener('click', () => {
-            if (player1Score > player2Score) {
-                declarations = 'Congratulations, Player 1. You reign victorious.';
-            } else if (player1Score < player2Score) {
-                declarations = 'Kudos to you, Player 2, on your success this game.';
-            } else {
-                declarations = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
-            }
-        }));
-
-    };
+    // questionIndex();
+    questionPosed.innerHTML = questionAnswerPairs[questionIndex].question;
+    return questionPosed;
 }
 
 function evaluateAnswer() {
-    if (playerAnswer.toLowerCase() === questionAnswerPairs[i].answer.toLowerCase()) {
+    if (playerAnswer.innerHTML.toLowerCase() === questionAnswerPairs[questionIndex].answer.toLowerCase()) {
         if (primaryTurn === true) {
-            player1Score += questionAnswerPairs[i].points;
+            player1Score += questionAnswerPairs[questionIndex].points;
         } else if (primaryTurn = false) {
-            player2Score += questionAnswerPairs[i].points;
+            player2Score += questionAnswerPairs[questionIndex].points;
         }
     } else {
         declarations = 'Unaccepted answer';
@@ -100,10 +89,51 @@ function evaluateAnswer() {
     scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
 }
 
+function winCondition() {
+    let conditions = [player1Score > player2Score, player2Score > player1Score];
+    conditions.forEach(condition => {
+        if (player1Score > player2Score) {
+            declarations.innerHTML = 'Congratulations, Player 1. You reign victorious.';
+            return declarations;
+        } else if (player1Score < player2Score) {
+            declarations.innerHTML = 'Kudos to you, Player 2, on your success this game.';
+            return declarations;
+        } else {
+            declarations.innerHTML = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
+            return declarations;
+        };
+    });
+}
+
+nextQButton.addEventListener('click', selectQuestion);
+submitButton.addEventListener('click', evaluateAnswer);
+
+function playGame() {
+    // for (let i = 0; i < questionAnswerPairs.length; i++) {
+        if (endGame.addEventListener('click', winCondition));
+        else {
+
+            // selectQuestion();
+
+            if (player1Score >= 150 || player2Score >= 150) {
+                winCondition();
+            } else {
+                if (player = 'Player 1') {
+                    player = 'Player 2';
+                } else if (player = 'Player 2') {
+                    player = 'Player 1';
+                }
+            }
+        }
+    // }
+}
+
+playGame();
+
+
 playAgain.addEventListener('click', () => {
     player1Score = 0;
     player2Score = 0;
     primaryTurn = true;
 })
 
-selectQuestion();
