@@ -68,7 +68,7 @@ declarations.innerHTML = `${player}, here is your challenge for contemplation`;
 function selectQuestion() {
     // questionIndex();
     questionPosed.innerHTML = questionAnswerPairs[questionIndex].question;
-    return questionPosed;
+    return questionPosed.innerHTML;
 }
 
 function evaluateAnswer() {
@@ -79,14 +79,14 @@ function evaluateAnswer() {
             player2Score += questionAnswerPairs[questionIndex].points;
         }
     } else {
-        declarations = 'Unaccepted answer';
+        declarations.innerHTML = 'Unaccepted answer';
         if (primaryTurn === true) {
             player1Score -= Math.ceil(questionAnswerPairs[i].points / 2);
         } else if (primaryTurn = false) {
             player2Score -= Math.ceil(questionAnswerPairs[i].points / 2);
         }
     }
-    scoreboard = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
+    scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
 }
 
 function winCondition() {
@@ -94,13 +94,13 @@ function winCondition() {
     conditions.forEach(condition => {
         if (player1Score > player2Score) {
             declarations.innerHTML = 'Congratulations, Player 1. You reign victorious.';
-            return declarations;
+            return declarations.innerHTML;
         } else if (player1Score < player2Score) {
             declarations.innerHTML = 'Kudos to you, Player 2, on your success this game.';
-            return declarations;
+            return declarations.innerHTML;
         } else {
             declarations.innerHTML = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
-            return declarations;
+            return declarations.innerHTML;
         };
     });
 }
