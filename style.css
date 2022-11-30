@@ -2,8 +2,9 @@ body {
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/St-Anne_church_Krakow_003.JPG');
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/St-Anne_church_Krakow_003.JPG'); */
 }
 
 .interactive {
@@ -14,4 +15,14 @@ body {
 .scoreboard {
     text-align: right;
     margin: 0px 50px 0px 0px;
+}
+
+.question {
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 65px;
 }

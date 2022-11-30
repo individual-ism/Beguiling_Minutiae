@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Pinyon+Script&family=Playfair+Display+SC:ital@0;1&family=Tangerine&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <title>Beguiling Minutiae</title>
 </head>
 <body>
     <h1>Beguiling Minutiae</h1>
     <h4 class='notes'>Caveat Emptor: the rigor of this contest may cause fits of apoplexy</h4>
     <h2 class='declarations'></h2>
-    <p>Question:<br class='questionFullText'></br></p>
+    <p class='question'><strong>Question: </strong><span class='questionFullText'></span></p>
     <h2 class='scoreboard'>Player 1 Points: 0 | Player 2 Points: 0</h2>
     <div class='interactive'>
         <div>
-    <input type="text" id='answer'>
+    <input type="text" placeholder='response' id='answer'>
     <button type="submit" id='submit'>Submit</button>
     <button id='nextQuestion'>Next Question</button>
 </div>
