@@ -58,7 +58,7 @@ let player2Score = 0;
 let player = 'Player 1';
 let utilizedQuestions = [];
 let primaryTurn;
-let questionIndex = Math.floor(Math.random() * questionAnswerPairs.length);
+// let questionIndex = Math.floor(Math.random() * questionAnswerPairs.length);
 
 
 
@@ -66,8 +66,9 @@ primaryTurn ? 'Player 1' : 'Player 2';
 declarations.innerHTML = `${player}, here is your challenge for contemplation`;
 
 function selectQuestion() {
+    let questionIndex = Math.floor(Math.random() * questionAnswerPairs.length);
     questionPosed.innerHTML = questionAnswerPairs[questionIndex].question;
-    return questionPosed.innerHTML;
+    // return questionPosed.innerHTML;
 }
 
 function evaluateAnswer() {
@@ -124,25 +125,7 @@ playAgain.addEventListener('click', reset);
 endGame.addEventListener('click', conclude);
 
 function playGame() {
-//     // for (let i = 0; i < questionAnswerPairs.length; i++) {
-//         if (endGame.addEventListener('click', winCondition));
-//         else {
-
-//             selectQuestion();
-
-//             if (player1Score >= 150 || player2Score >= 150) {
-//                 winCondition();
-//             } else {
-//                 if (player = 'Player 1') {
-//                     player = 'Player 2';
-//                 } else if (player = 'Player 2') {
-//                     player = 'Player 1';
-//                 }
-//             }
-//         }
-//     // }
-// // }
-while (player1Score < 150 && player2Score < 150){
+    while (player1Score < 150 && player2Score < 150){
         selectQuestion();
         evaluateAnswer();
         playerAnswer.innerHTML = '';
