@@ -78,8 +78,8 @@ const qA = [
     },
     {
         number: 3,
-        question: 'Moonlight Sonata is one of the most well-known works of Ludwig van Beethoven, but few recall the opus in its official name. Provide the opus number to Piano Sonata No. 14 in words.',
-        answer: 'twenty-seven',
+        question: 'Moonlight Sonata is one of the most well-known works of Ludwig van Beethoven, but few recall the opus in its official name. Provide the opus number to Piano Sonata No. 14 in Arabic numerals.',
+        answer: '27',
         points: 5
     },
     {
@@ -97,7 +97,7 @@ const qA = [
 ];
 
 
-let playerAnswer = document.querySelector('#answer');
+let playerAnswer = document.querySelector('#input_id');
 let fullQuestion = document.querySelector('.question');
 let declarations = document.querySelector('.declarations');
 let endGame = document.querySelector('#endgame');
@@ -121,18 +121,24 @@ let playerTurn = document.querySelector('.playerTurn');
 primaryTurn ? player = 'Player 1' : player = 'Player 2';
 playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
 
-
+function determineIndex() {
+    indexNum = Math.floor(Math.random() * qA.length);
+}
 
 function selectQuestion() {
     qA.forEach(q => {
-        let indexNum = Math.floor(Math.random() * qA.length);
+        determineIndex();
         questionPosed.innerHTML = qA[indexNum].question;
     })
+    return indexNum;
 };
 
 function evaluateAnswer() {
     // userInput = playerAnswer.innerHTML.toLowerCase();
+    const userInput = document.getElementById('input_id').value;
     if (userInput === qA[indexNum].answer) {
+        console.log(userInput);
+        declarations.innerHTML = 'Correct';
         if (player === 'Player 1') {
             player1Score += qA[indexNum].points;
             primaryTurn = false;
@@ -143,6 +149,7 @@ function evaluateAnswer() {
             player = 'Player 1';
         };
     } else if (userInput !== qA[indexNum].answer) {
+        console.log(userInput)
         declarations.innerHTML = 'Incorrect';
         if (player === 'Player 1') {
             player1Score -= Math.ceil(qA[indexNum].points / 2);
@@ -158,6 +165,11 @@ function evaluateAnswer() {
     // utilizedQuestions.push(questionPosed);
     // qA.slice(qA[indexNum], 1);
     scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
+    if (player1Score >= 150 || player2Score >= 150) {
+        winCondition();
+        document.getElementById('submit').disabled = true;
+    }
+    console.log(indexNum)
 };
 
 
@@ -204,17 +216,20 @@ function playGame() {
     conclude();
 };
 
+function startsGame() {
+    selectQuestion();
+    document.getElementById('startGame').disabled = true;
+}
+
 nextQButton.addEventListener('click', selectQuestion);
-submitButton.addEventListener('click', evaluateAnswer);
+// submitButton.addEventListener('click', evaluateAnswer);
 playAgain.addEventListener('click', reset);
 endGame.addEventListener('click', conclude);
-startGame.addEventListener('click', () => {
-    selectQuestion();
-    startGame.removeEventListener('click', selectQuestion);
-});
+// startGame.addEventListener('click', startGame);
 
 
 // playGame();
-console.log(qA[indexNum].question);
-console.log(qA[indexNum].answer);
+// console.log(qA[indexNum].question);
+// console.log(qA[indexNum].answer);
 console.log(playerAnswer.innerHTML);
+console.log(selectQuestion())
