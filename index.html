@@ -15,8 +15,7 @@
     <h4 class='notes'>Caveat Emptor: the rigor of this contest may cause fits of apoplexy</h4>
     <div class='manipulatible'>
         <h2 class='playerTurn'></h2>
-        <!-- <button id='startGame'>Start Game</button> -->
-        <input type="button" value="Start Game" onclick="startsGame()">
+        <input type="button" value="Start Game" id='startGame' onclick="startsGame()">
         <h2 class='scoreboard'>Player 1 Points: 0 | Player 2 Points: 0</h2>
         <h2 class='declarations'></h2>
         <p class='question'><strong>Question:</strong><br></p>
@@ -30,12 +29,12 @@
         </div>
         <div>
             <br>
-            <button id='nextQuestion'>Next Question</button>
+            <input type="button" value="Next Question" id='nextQuestion' onclick='selectQuestion()'>
             <br>
             <br>
-            <button id='endgame'>End Game</button>
+            <input type="button" value="End Game" id="endGame" onclick="conclude()" />
             <br>
-            <button type="reset" id='reset'>Reset</button>
+            <input type="button" value="Reset" onclick='reset()' />
         </div>
     </div>
 </body>
