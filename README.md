@@ -12,6 +12,7 @@ This trivia game will test your knowledge of intricate details across a great br
 
 ## Instructions
 - A question shalt be put forth to a player on his or her respective turn.
+- All answers must be typed out, with correct spelling.
 - Correct answers will be rewarded with points according to the scoring model.
 - Incorrect answers will inflict a penalty on the player.
 - First to reach 150 points wins.

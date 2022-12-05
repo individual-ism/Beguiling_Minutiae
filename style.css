@@ -1,27 +1,34 @@
 body {
+    display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
-    display: flex;
     flex-direction: column;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/St-Anne_church_Krakow_003.JPG');
+    background-image: url('./wp4132602.jpg');
     background-position: center;
 }
 
-/* .interactive {
-    display: flex;
-    flex-direction: column;
-} */
-
 .question {
     flex-wrap: wrap;
+    max-width: 50%;
+    /* justify-content: center; */
+    text-align: center;
+    /* align-items: center; */
+    /* align-self: center; */
+    border-radius: 25px;
+    background: antiquewhite;
+    width: 400px;
+    /* height: 125px; */
+    padding: 10px 25px 50px 25px;
+    display: inline-block;
+    
 }
 
 h1 {
     font-family: 'UnifrakturMaguntia', cursive;
     font-size: 65px;
     color: black;
-    text-shadow: 2px 2px white;
+    text-shadow: 5px 5px antiquewhite;
 }
 
 .startGame {
@@ -29,9 +36,15 @@ h1 {
     flex-wrap: nowrap;
 }
 
-p {
-    background-color: white;
-    background-size: 75%;
-    /* max-width: 75%; */
-    padding: 0px 25px 100px 25px;
+input {
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'Tangerine', serif;
+    background-color: antiquewhite;
+}
+
+
+
+h2, h3, h4 {
+    color: antiquewhite;
 }
