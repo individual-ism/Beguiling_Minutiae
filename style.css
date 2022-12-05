@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     background-image: url('./wp4132602.jpg');
     background-position: center;
+    font-family: 'Cinzel', serif;
 }
 
 .question {
@@ -18,10 +19,13 @@ body {
     border-radius: 25px;
     background: antiquewhite;
     width: 400px;
-    /* height: 125px; */
-    padding: 10px 25px 50px 25px;
+    height: 165px;
+    padding: 10px 25px 10px 25px;
     display: inline-block;
-    
+}
+
+h4 {
+    padding: 0px 0px 0px 0px;
 }
 
 h1 {
@@ -29,12 +33,14 @@ h1 {
     font-size: 65px;
     color: black;
     text-shadow: 5px 5px antiquewhite;
+    padding: 0px 0px -50px 0px;
+    margin: 15px 0px 0px 0px;
 }
 
-.startGame {
+/* .startGame {
     max-width: max-content;
     flex-wrap: nowrap;
-}
+} */
 
 input {
     padding: 15px;
@@ -43,8 +49,19 @@ input {
     background-color: antiquewhite;
 }
 
-
+.scoreboard {
+    font-family: 'Cinzel', serif;
+}
 
 h2, h3, h4 {
     color: antiquewhite;
+}
+
+#placeholder {
+    font-family: 'Cinzel', serif;
+}
+
+#input_id {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 17px;
 }

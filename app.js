@@ -215,12 +215,14 @@ function selectQuestion() {
     qA.forEach(q => {
         determineIndex();
         questionPosed.innerHTML = qA[indexNum].question;
+        document.getElementById('submit').disabled = false;
     })
     return indexNum;
 };
 
 // Determines whether the answer is correct and adds points accordingly
 function evaluateAnswer() {
+    document.getElementById('submit').disabled = true;
     const userInput = document.getElementById('input_id').value;
     if (userInput.toLowerCase() === qA[indexNum].answer) {
         // console.log(userInput);
@@ -250,15 +252,13 @@ function evaluateAnswer() {
     playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
     utilizedQuestions.push(questionPosed);
     qA.splice(indexNum, 1);
-    console.log(utilizedQuestions);
-    console.log(qA);
+    // console.log(utilizedQuestions);
+    // console.log(qA);
     scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
     if (player1Score >= 150 || player2Score >= 150) {
         winCondition();
         document.getElementById('submit').disabled = true;
     }
-    // console.log(indexNum);
-    // console.log(utilizedQuestions);
     document.getElementsByClassName('question').value = '';
     document.getElementById('input_id').value = '';
 };
