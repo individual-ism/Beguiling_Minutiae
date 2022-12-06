@@ -34,6 +34,17 @@ This trivia game will test your knowledge of intricate details across a great br
 
 ## Potential Future Modifications
 - Create subject-specific question sets.
+- Provide correct answers if inputted answer is incorrect.
 - Provide proportional statistics to inform players of percentage of questions answered correctly.
 - Generate a leaderboard based on total games won.
 - Allow players to enter their names to personalize the game.
+
+## MVP Intentions
+- User should have a clearly defined layout, with components appropriately labeled.
+- User should easily be able to delineate between purposes of the respective areas (i.e. buttons, input area, question generation, etc.).
+- User should be able to utilize keyboard shortcuts, including the return key, to maximize efficiency of gameplay.
+- User should be informed whether answer was correct upon submission.
+- User should be indicated of victor upon reaching the defined point limit or by clicking the 'End Game' button.
+
+## Wireframe
+![wireframe](./wireframe.jpg)

@@ -172,11 +172,11 @@ const qA = [
         question: 'The state of Virginia enacted the Racial Integrity Act - an anti-miscegenation law - and the Virginia Sterilization Act - a eugenics law - in 1924. Only one of these laws was overturned by the Supreme Court. What is the name of the case that did not overturn a law? (Provide your response as "party 1 v. party 2".)',
         answer: 'buck v. bell',
         points: 4
-    },
-    {
-        number: 29,
-        question: ''
     }
+//     {
+//         number: 29,
+//         question: ''
+//     }
 ];
 
 // Aligns JavaScript variables with HTML elements
@@ -243,6 +243,8 @@ function evaluateAnswer() {
             primaryTurn = true;
             player = 'Player 1';
         };
+        utilizedQuestions.push(questionPosed);
+        qA.splice(indexNum, 1);
     } else if (userInput !== qA[indexNum].answer) {
         declarations.innerHTML = 'Incorrect';
         if (player === 'Player 1') {
@@ -256,9 +258,9 @@ function evaluateAnswer() {
         };
     };
     playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
-    utilizedQuestions.push(questionPosed);
-    qA.splice(indexNum, 1);
-    scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
+    console.log(utilizedQuestions);
+    console.log(qA);
+        scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
     if (player1Score >= 150 || player2Score >= 150) {
         winCondition();
         document.getElementById('submit').disabled = true;
