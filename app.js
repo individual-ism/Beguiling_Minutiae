@@ -177,7 +177,7 @@ const qA = [
     {
         number: 29,
         question: 'The signature song of Frank Sinatra, "My Way", was musically based on the French song, "Comme D\'habitude". What is the first and last name of the composer of "Comme D\'habitude"?',
-        answer: 'Jacques Revaux',
+        answer: 'jacques revaux',
         points: 5
     },
     {
