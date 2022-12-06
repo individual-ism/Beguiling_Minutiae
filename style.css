@@ -1,4 +1,4 @@
-body {
+.gamePage {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -6,29 +6,23 @@ body {
     flex-direction: column;
     background-image: url('./wp4132602.jpg');
     background-position: center;
+    background-size: 2560px;
     font-family: 'Cinzel', serif;
 }
 
 .question {
     flex-wrap: wrap;
     max-width: 50%;
-    /* justify-content: center; */
     text-align: center;
-    /* align-items: center; */
-    /* align-self: center; */
     border-radius: 25px;
     background: antiquewhite;
     width: 400px;
-    height: 165px;
+    height: 190px;
     padding: 10px 25px 10px 25px;
     display: inline-block;
 }
 
-h4 {
-    padding: 0px 0px 0px 0px;
-}
-
-h1 {
+#mainTitle {
     font-family: 'UnifrakturMaguntia', cursive;
     font-size: 65px;
     color: black;
@@ -37,11 +31,6 @@ h1 {
     margin: 15px 0px 0px 0px;
 }
 
-/* .startGame {
-    max-width: max-content;
-    flex-wrap: nowrap;
-} */
-
 input {
     padding: 15px;
     font-size: 25px;
@@ -49,19 +38,29 @@ input {
     background-color: antiquewhite;
 }
 
-.scoreboard {
-    font-family: 'Cinzel', serif;
-}
-
 h2, h3, h4 {
     color: antiquewhite;
-}
-
-#placeholder {
-    font-family: 'Cinzel', serif;
 }
 
 #input_id {
     font-family: 'Bodoni Moda', serif;
     font-size: 17px;
 }
+
+.directionsPage {
+    background-image: url('./0*xmCTpUBavZUx58cP.jpg');
+    background-position: unset;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: black;
+    font-family: 'Cinzel', serif;
+}
+
+#directTitle {
+    font-size: 65px;
+    color: white;
+    text-shadow: 5px 5px black;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+

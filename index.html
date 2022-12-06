@@ -8,36 +8,35 @@
     <script src="./app.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Cinzel:wght@600&family=Pinyon+Script&family=Bodoni+Moda:ital,opsz@1,6..96&family=Tangerine&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./homepage.html">
     <title>Beguiling Minutiae</title>
 </head>
-<body>
-    <h1>Beguiling Minutiae</h1>
+<body class='gamePage'>
+    <h1 id='mainTitle'>Beguiling Minutiae</h1>
     <h4 class='notes'>Caveat Emptor: the rigor of this contest may cause fits of apoplexy</h4>
     <div class='manipulatible'>
         <h2 class='playerTurn'></h2>
-        <!-- <input type="button" value="Start Game" id='startGame' onclick="startsGame()"> -->
         <h2 class='scoreboard'>Player 1 Points: 0 | Player 2 Points: 0</h2>
         <h2 class='declarations'></h2>
-        <!-- <p class='question'><strong>Question:</strong><br></p> -->
     </div>
     <div class='interactive'>
         <div class='responders'>
             <div class='test'>
             <p class='question'><strong id='placeholder'>Question:</strong></p>
-            <p id='question'></p>
         </div>
             <span></span>
             <form class='form'>
                 <input type="text" id="input_id" value="">
-                <input type="button" value="Submit" onclick="evaluateAnswer()" id='submit' />
-                <input type="button" value="Next Question" id='nextQuestion' onclick='selectQuestion()'>
+                <input type="submit" value="Submit" onclick="evaluateAnswer()" id='submit' />
+                <input type="button" value="Next Question" id='nextQuestion' accesskey='n' onclick='selectQuestion()' />
             </form>
         </div>
         <div>
             <br>
-            <input type="button" value="Start Game" id='startGame' onclick="startsGame()">
-            <input type="button" value="End Game" id="endGame" onclick="conclude()" />
-            <input type="button" value="Reset" onclick='reset()' />
+            <input type="button" value="Start Game" id='startGame' accesskey='s' onclick="startsGame()">
+            <input type="button" value="End Game" id="endGame" accesskey='e' onclick="conclude()" />
+            <input type="button" value="Reset" id='reset' accesskey='r' onclick='reset()' />
+            <input type="button" value="Directions" accesskey='d' onclick='window.open("./homepage.html")'>
         </div>
     </div>
 </body>

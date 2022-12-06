@@ -188,7 +188,13 @@ let playAgain = document.querySelector('#reset');
 let questionPosed = document.querySelector('.question');
 let submitButton = document.querySelector('#submit');
 let nextQButton = document.querySelector('#nextQuestion');
-let startGame = document.querySelector('.startGame')
+let startGame = document.querySelector('.startGame');
+let directions = document.querySelector('.directions');
+let playerTurn = document.querySelector('.playerTurn');
+document.getElementById('submit').disabled = true;
+document.getElementById('nextQuestion').disabled = true;
+document.getElementById('endGame').disabled = true;
+document.getElementById('reset').disabled = true;
 
 // Creates variables for functional usage
 let player1Score = 0;
@@ -198,12 +204,12 @@ let utilizedQuestions = [];
 let userInput = playerAnswer.innerHTML;
 let primaryTurn;
 let indexNum = Math.floor(Math.random() * qA.length);
-let playerTurn = document.querySelector('.playerTurn');
-
+let directionsOn = true;
 
 // Determines turn order and message for each turn
 primaryTurn ? player = 'Player 1' : player = 'Player 2';
-playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
+playerTurn.innerHTML = 'Players 1 & 2: Prepare for the battle of your wits. First to 100 wins.';
+
 
 // Determines random index for questions
 function determineIndex() {
@@ -216,6 +222,7 @@ function selectQuestion() {
         determineIndex();
         questionPosed.innerHTML = qA[indexNum].question;
         document.getElementById('submit').disabled = false;
+        document.getElementById('nextQuestion').disabled = true;
     })
     return indexNum;
 };
@@ -223,9 +230,9 @@ function selectQuestion() {
 // Determines whether the answer is correct and adds points accordingly
 function evaluateAnswer() {
     document.getElementById('submit').disabled = true;
+    document.getElementById('nextQuestion').disabled = false;
     const userInput = document.getElementById('input_id').value;
     if (userInput.toLowerCase() === qA[indexNum].answer) {
-        // console.log(userInput);
         declarations.innerHTML = 'Correct';
         if (player === 'Player 1') {
             player1Score += qA[indexNum].points;
@@ -237,7 +244,6 @@ function evaluateAnswer() {
             player = 'Player 1';
         };
     } else if (userInput !== qA[indexNum].answer) {
-        // console.log(userInput)
         declarations.innerHTML = 'Incorrect';
         if (player === 'Player 1') {
             player1Score -= Math.ceil(qA[indexNum].points / 2);
@@ -252,8 +258,6 @@ function evaluateAnswer() {
     playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
     utilizedQuestions.push(questionPosed);
     qA.splice(indexNum, 1);
-    // console.log(utilizedQuestions);
-    // console.log(qA);
     scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
     if (player1Score >= 150 || player2Score >= 150) {
         winCondition();
@@ -277,6 +281,9 @@ function winCondition() {
 
 // Action if the End Game button is pushed 
 function conclude() {
+    document.getElementById('nextQuestion').disabled = true;
+    document.getElementById('submit').disabled = true;
+    document.getElementById('endGame').disabled = true;
     if (player1Score === player2Score) {
         declarations.innerHTML = 'You are too evenly matched in intellect. Till next your minds compete, pursue your curiosity, lest it kill your cat.';
     } else {
@@ -286,6 +293,7 @@ function conclude() {
 
 // Resets the game to allow for a new game to be begun
 function reset() {
+    document.getElementById('endGame').disabled = true;
     player1Score = 0;
     player2Score = 0;
     userInput.value = "";
@@ -295,24 +303,14 @@ function reset() {
     document.getElementById('input_id').value = '';
 };
 
-
-
-function playGame() {
-    while (player1Score < 150 && player2Score < 150) {
-        selectQuestion();
-        evaluateAnswer();
-        playerAnswer.reset();
-        if (player === 'Player 1') {
-            player = 'Player 2';
-        } else {
-            player = 'Player 1';
-        };
-    };
-    conclude();
-};
-
 // Start Game button action
 function startsGame() {
+    player = 'Player 1';
+    primaryTurn = true;
+    playerTurn.innerHTML = `${player}, here is your challenge for contemplation`;
     selectQuestion();
     document.getElementById('startGame').disabled = true;
+    document.getElementById('nextQuestion').disabled = true;
+    document.getElementById('endGame').disabled = false;
+    document.getElementById('reset').disabled = false;
 }
