@@ -2,9 +2,10 @@
 const qA = [
     {
         number: 0,
-        question: 'In declaring that "American blood has been shed on American soil", President James Polk sought congressional approval to retaliate against British-controlled Canada.',
+        question: 'In declaring that "American blood has been shed on American soil", President James Polk sought congressional approval to retaliate against British-controlled Canada. True or False?',
         answer: 'false',
-        points: 1},
+        points: 1
+    },
     {
         number: 1,
         question: 'After President Woodrow Wilson fell ill in the latter half of his second term, this person is rumored to have taken unofficial control of the presidency. What is the first and last name of this person?',
@@ -55,7 +56,7 @@ const qA = [
     },
     {
         number: 9,
-        question: 'President Ronald Reagan was nicknamed "The Great Communicator", but which American president begun the tradition of addressing American families through a mass media in their respective homes? (Provide the first, middle, and last name)',
+        question: 'President Ronald Reagan was nicknamed "The Great Communicator", but which American president begun the tradition of addressing American families through a mass media in their respective homes? Provide the first, middle, and last name.',
         answer: 'franklin delano roosevelt',
         points: 2
     },
@@ -79,7 +80,7 @@ const qA = [
     },
     {
         number: 13,
-        question: 'John F. Kennedy served as the first Catholic president of the United States, but who was the first Catholic nominee of a major political party? (Provide the full first and last name)',
+        question: 'John F. Kennedy served as the first Catholic president of the United States, but who was the first Catholic nominee of a major political party? Provide the full first and last name.',
         answer: 'alfred smith',
         points: 2
     },
@@ -97,13 +98,13 @@ const qA = [
     },
     {
         number: 16,
-        question: 'Ayn Rand wrote two well-known novels in the mid-twentieth century, promoting a form of individualism. Cited by advocates of the free market economy, who is the character she deemed most representative of her philosophy? (Provide the first and last name)',
+        question: 'Ayn Rand wrote two well-known novels in the mid-twentieth century, promoting a form of individualism. Cited by advocates of the free market economy, who is the character she deemed most representative of her philosophy? Provide the first and last name.',
         answer: 'john galt',
         points: 2,
     },
     {
         number: 17,
-        question: 'Had Britain fallen to the rule of the Nazis during the second world war, a plan had been laid out to reinstate George V as king, overthrowing the existent monarch and constitutional government.',
+        question: 'Had Britain fallen to the rule of the Nazis during the second world war, a plan had been laid out to reinstate George V as king, overthrowing the existent monarch and constitutional government. True or false?',
         answer: 'false',
         points: 1
     },
@@ -121,13 +122,13 @@ const qA = [
     },
     {
         number: 20,
-        question: 'The Lower East Side of New York has historically strong Jewish roots. Yonah Schimmel is one such business representative of those ties. What is the primary product sold there? (Pluralize your response)',
+        question: 'The Lower East Side of New York has historically strong Jewish roots. Yonah Schimmel is one such business representative of those ties. What is the primary product sold there? Pluralize your response.',
         answer: 'knishes',
         points: 2
     },
     {
         number: 21,
-        question: 'This president of the United States was the first to apologize for the internment of Japanese Americans during World War II. Who was he? (Provide the first and last name)',
+        question: 'This president of the United States was the first to apologize for the internment of Japanese Americans during World War II. Who was he? Provide the first and last name.',
         answer: 'ronald reagan',
         points: 2
     },
@@ -139,25 +140,25 @@ const qA = [
     },
     {
         number: 23,
-        question: 'Shinzo Abe, the former Japanese prime minister, was assassinated due to his association with the Unification Church. What was the name of the founder of said church? (Provide the full name)',
+        question: 'Shinzo Abe, the former Japanese prime minister, was assassinated due to his association with the Unification Church. What was the name of the founder of said church? Provide the full name.',
         answer: 'sun myung moon',
         points: 4
     },
     {
         number: 24,
-        question: 'The phrase, "Drinking the Kool-Aid", was made famous in the aftermath of the mass suicide event propogated by this man. Who is he? (Provide the first and last name by which he was known.)',
+        question: 'The phrase, "Drinking the Kool-Aid", was made famous in the aftermath of the mass suicide event propogated by this man. Who is he? Provide the first and last name by which he was known.',
         answer: 'jim jones',
         points: 2
     },
     {
         number: 25,
-        question: 'This former Missouri congressman became prominent in the national news for a claim made during a 2012 Senate campaign that "If it\'s a legitimate rape, the female body has ways to try to shut that whole thing down." What was his  name? (Provide the first and last name by which he was known.)',
+        question: 'This former Missouri congressman became prominent in the national news for a claim made during a 2012 Senate campaign that "If it\'s a legitimate rape, the female body has ways to try to shut that whole thing down." What was his  name? Provide the first and last name by which he was known.',
         answer: 'todd akin',
         points: 4
     },
     {
         number: 26,
-        question: 'The number of Supreme Court justices is explicitly set forth by the Constitution of the United States.',
+        question: 'The number of Supreme Court justices is explicitly set forth by the Constitution of the United States. True or false?',
         answer: 'false',
         points: 1
     },
@@ -169,13 +170,81 @@ const qA = [
     },
     {
         number: 28,
-        question: 'The state of Virginia enacted the Racial Integrity Act - an anti-miscegenation law - and the Virginia Sterilization Act - a eugenics law - in 1924. Only one of these laws was overturned by the Supreme Court. What is the name of the case that did not overturn a law? (Provide your response as "party 1 v. party 2".)',
+        question: 'The state of Virginia enacted the Racial Integrity Act - an anti-miscegenation law - and the Virginia Sterilization Act - a eugenics law - in 1924. Only one of these laws was overturned by the Supreme Court. What is the name of the case that did not overturn a law? Provide your response as "party 1 v. party 2".',
         answer: 'buck v. bell',
         points: 4
     },
     {
         number: 29,
-        question: ''
+        question: 'The signature song of Frank Sinatra, "My Way", was musically based on the French song, "Comme D\'habitude". What is the first and last name of the composer of "Comme D\'habitude"?',
+        answer: 'Jacques Revaux',
+        points: 5
+    },
+    {
+        number: 30,
+        question: 'President George Washington, in his farewell address, affirmed his commitment to the established, though new, constitutional republican government. The letter most famously warned against the formation of what?',
+        answer: 'political parties',
+        points: 4
+    },
+    {
+        number: 31,
+        question: 'The case of Marbury v. Madison established the supremacy of the Supreme Court in interpreting the Constitution. It was brought forth because which president refused to deliver those judicial commissions approved but not delivered under his predecessor? Provide the first and last name.',
+        answer: 'thomas jefferson',
+        points: 2
+    },
+    {
+        number: 32,
+        question: 'President Ronald Reagan had the opportunity to appoint a third new justice to the Supreme Court in 1987. His initial nominee, Robert Bork was rejected by the Senate. Who did the President appoint and was subsequently confirmed? Provide the first and last name.',
+        answer: 'anthony kennedy',
+        points: 2
+    },
+    {
+        number: 33,
+        question: 'Dean Martin hosted a roast show from the MGM Grand Hotel in Las Vegas during the mid- to late-1900s. Who served as roast master when Dean Martin was the guest of honor?',
+        answer: 'don rickles',
+        points: 4
+    },
+    {
+        number: 34,
+        question: 'The Gulag system was established by Czar Nicholas II and perpetuated by the succeeding Soviet regime. True or false?',
+        answer: 'false',
+        points: 1
+    },
+    {
+        number: 35,
+        question: 'Euler\'s number begins with 2.718281828. What are the following six digits?',
+        answer: '459045',
+        points: 5
+    },
+    {
+        number: 36,
+        question: 'New Zealand has a robust wine industry. With which American state is the climate similar, such that the wine grape varietals grown are largely of overlapping? Provide the full state name.',
+        answer: 'oregon',
+        points: 4
+    },
+    {
+        number: 37,
+        question: 'Within the first few months of his first term, Abraham Lincoln suspended what kind of writ in the name of suppressing the rebellion of the Confederate States?',
+        answer: 'habeas corpus',
+        points: 2
+    },
+    {
+        number: 38,
+        question: 'In the seventy five years since the passage of the National Security Act of 1947, only three secretaries of defense have required congressional waivers. Most recently, James Mattis and Lloyd Austin - the first defense secretaries for their respective presidents - were granted such waivers, but who was the first? Provide the first and last name.',
+        answer: 'george marshall',
+        points: 5
+    },
+    {
+        number: 39,
+        question: 'The square root of -1 is an imaginary number. By what variable name is it referred?',
+        answer: 'i',
+        points: 4
+    },
+    {
+        number: 40,
+        question: 'An _____ is an atom or collection of atoms bearing the same atomic number as its periodic table base element but with a different mass number, whilst an _____ is an atom or collection of atoms that has either gained or lost electrons, consequently generating either a positive or negative charge. (1. ion/isotope; 2. isotope/ion; 3. amorphism/isotope; 4. ion/amorphism)',
+        answer: 'isotope/ion',
+        points: 2
     }
 ];
 
@@ -208,7 +277,7 @@ let directionsOn = true;
 
 // Determines turn order and message for each turn
 primaryTurn ? player = 'Player 1' : player = 'Player 2';
-playerTurn.innerHTML = 'Players 1 & 2: Prepare for the battle of your wits. First to 100 wins.';
+playerTurn.innerHTML = 'Players 1 & 2: Prepare for the battle of your wits. First to 100 points wins.';
 
 
 // Determines random index for questions
@@ -261,7 +330,7 @@ function evaluateAnswer() {
     console.log(utilizedQuestions);
     console.log(qA);
         scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
-    if (player1Score >= 150 || player2Score >= 150) {
+    if (player1Score >= 100 || player2Score >= 100) {
         winCondition();
         document.getElementById('submit').disabled = true;
     }
