@@ -277,7 +277,7 @@ let directionsOn = true;
 
 // Determines turn order and message for each turn
 primaryTurn ? player = 'Player 1' : player = 'Player 2';
-playerTurn.innerHTML = 'Players 1 & 2: Prepare for the battle of your wits. First to 100 points wins.';
+playerTurn.innerHTML = 'Players 1 & 2: Prepare for the battle of your wits. First to 50 points wins.';
 
 
 // Determines random index for questions
@@ -330,7 +330,7 @@ function evaluateAnswer() {
     console.log(utilizedQuestions);
     console.log(qA);
         scoreboard.innerHTML = `Player 1 Points: ${player1Score} | Player 2 Points: ${player2Score}`;
-    if (player1Score >= 100 || player2Score >= 100) {
+    if (player1Score >= 50 || player2Score >= 50) {
         winCondition();
         document.getElementById('submit').disabled = true;
     }
