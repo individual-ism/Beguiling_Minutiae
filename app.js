@@ -245,10 +245,6 @@ const qA = [
         question: 'An _____ is an atom or collection of atoms bearing the same atomic number as its periodic table base element but with a different mass number, whilst an _____ is an atom or collection of atoms that has either gained or lost electrons, consequently generating either a positive or negative charge. (1. ion/isotope; 2. isotope/ion; 3. amorphism/isotope; 4. ion/amorphism)',
         answer: 'isotope/ion',
         points: 2
-    },
-    {
-        number: 41,
-        question: 
     }
 ];
 
