@@ -334,6 +334,9 @@ function evaluateAnswer() {
         winCondition();
         document.getElementById('submit').disabled = true;
     }
+    if (qA === []) {
+        conclude();
+    }
     document.getElementsByClassName('question').value = '';
     document.getElementById('input_id').value = '';
 };
