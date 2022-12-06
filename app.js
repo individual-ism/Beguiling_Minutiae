@@ -176,8 +176,8 @@ const qA = [
     },
     {
         number: 29,
-        question: 'The signature song of Frank Sinatra, "My Way", was musically based on the French song, "Comme D\'habitude". What is the first and last name of the composer of "Comme D\'habitude"?',
-        answer: 'jacques revaux',
+        question: 'In Roe v. Wade, only two justices dissented, one of whom eventually became the chief justice of the Supreme Court. What is the first and last name of the other justice?',
+        answer: 'byron white',
         points: 5
     },
     {
@@ -245,6 +245,12 @@ const qA = [
         question: 'An _____ is an atom or collection of atoms bearing the same atomic number as its periodic table base element but with a different mass number, whilst an _____ is an atom or collection of atoms that has either gained or lost electrons, consequently generating either a positive or negative charge. (1. ion/isotope; 2. isotope/ion; 3. amorphism/isotope; 4. ion/amorphism)',
         answer: 'isotope/ion',
         points: 2
+    },
+    {
+        number: 41,
+        question: 'The signature song of Frank Sinatra, "My Way", was musically based on the French song, "Comme D\'habitude". What is the first and last name of the composer of "Comme D\'habitude"?',
+        answer: 'jacques revaux',
+        points: 5
     }
 ];
 
@@ -334,9 +340,6 @@ function evaluateAnswer() {
         winCondition();
         document.getElementById('submit').disabled = true;
     }
-    // if (qA === []) {
-    //     conclude();
-    // }
     document.getElementsByClassName('question').value = '';
     document.getElementById('input_id').value = '';
 };

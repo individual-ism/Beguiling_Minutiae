@@ -39,6 +39,7 @@ This trivia game will test your knowledge of intricate details across a great br
 - Provide proportional statistics to inform players of percentage of questions answered correctly.
 - Generate a leaderboard based on total games won.
 - Allow players to enter their names to personalize the game.
+- Reformat to be more accessible to mobile users.
 
 ## MVP Intentions
 - User should have a clearly defined layout, with components appropriately labeled.
