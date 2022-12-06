@@ -25,8 +25,8 @@
 #mainTitle {
     font-family: 'UnifrakturMaguntia', cursive;
     font-size: 65px;
-    color: black;
-    text-shadow: 5px 5px antiquewhite;
+    color: antiquewhite;
+    text-shadow: 10px 10px black;
     padding: 0px 0px -50px 0px;
     margin: 15px 0px 0px 0px;
 }

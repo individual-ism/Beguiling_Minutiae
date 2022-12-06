@@ -33,6 +33,7 @@ This trivia game will test your knowledge of intricate details across a great br
     - New games can be started by clicking the 'Reset' button.
 
 ## Potential Future Modifications
+- Increase question list.
 - Create subject-specific question sets.
 - Provide correct answers if inputted answer is incorrect.
 - Provide proportional statistics to inform players of percentage of questions answered correctly.

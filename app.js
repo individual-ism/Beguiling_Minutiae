@@ -172,11 +172,11 @@ const qA = [
         question: 'The state of Virginia enacted the Racial Integrity Act - an anti-miscegenation law - and the Virginia Sterilization Act - a eugenics law - in 1924. Only one of these laws was overturned by the Supreme Court. What is the name of the case that did not overturn a law? (Provide your response as "party 1 v. party 2".)',
         answer: 'buck v. bell',
         points: 4
+    },
+    {
+        number: 29,
+        question: ''
     }
-//     {
-//         number: 29,
-//         question: ''
-//     }
 ];
 
 // Aligns JavaScript variables with HTML elements
